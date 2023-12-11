@@ -5,6 +5,17 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  daisyui: {
+    themes: [
+      {
+        dark: {
+          ...require("daisyui/src/theming/themes")["dark"], 
+          primary: "#e90286",
+          secondary: "#D902E9"
+        },
+      },
+    ],
+  },
   theme: {
     extend: {
       backgroundImage: {
@@ -14,5 +25,6 @@ module.exports = {
       },
     },
   },
-  plugins: [],
-}
+  
+  plugins: [require("daisyui")],
+};
